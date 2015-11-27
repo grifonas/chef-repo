@@ -1,0 +1,8 @@
+name 		'utils'
+maintainer 	'Greg K.'
+maintainer_email 'grifkon@gmail.com'
+license 	'all_rights'
+description 	'Installs/Configures utils'
+long_description 'Installs/Configures utils'
+depends 	'apt'
+version 	'0.1.0'
