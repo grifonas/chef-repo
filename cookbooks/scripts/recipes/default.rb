@@ -4,6 +4,8 @@
 #
 # Copyleft November 2015; Greg K.
 
+include_recipe 'apt' 
+
 template '/usr/local/bin/treesize.sh' do
   source 'treesize.sh.erb' 
   owner 'grifonas'
