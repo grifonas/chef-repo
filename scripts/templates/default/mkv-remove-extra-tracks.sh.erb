@@ -1,0 +1,91 @@
+#!/bin/bash
+
+#Check dependencies:
+DEP1=`which mkvmerge`
+DEP2=`which mplayer`
+if [[ -z $DEP1 && -z $DEP2 ]] ;
+  then echo -e "mkvtoolnix and mplayer are required for this script.\n"; 
+	read -p "Would you like to install them? [y/n]: " yn
+	case $yn in 
+	  [Yy]* ) sudo aptitude install mkvtoolnix mplayer;; 
+	  [Nn]* ) exit;;
+	  * ) echo "Please type (y)es or (n)o.";;
+	esac
+
+
+elif [[ -z $DEP1 ]] ;
+  then echo -e "mkvtoolnix is required for this script.\n";
+        read -p "Would you like to install it? [y/n]: " yn
+        case $yn in
+          [Yy]* ) sudo aptitude install mkvtoolnix;;
+          [Nn]* ) exit;;
+	   * ) echo "Please type (y)es or (n)o.";;
+        esac
+	
+elif [[ -z $DEP2 ]] ;
+  then echo -e "mplayer is required for this script.\n";
+        read -p "Would you like to install it? [y/n]: " yn
+        case $yn in
+          [Yy]* ) sudo aptitude install mplayer;;
+          [Nn]* ) exit;;
+           * ) echo "Please type (y)es or (n)o.";;
+        esac
+fi
+
+#Check arguments:
+if [ $# -lt 1 ]; then
+  echo -e 1>&2 "\n$0: You have to specify an .mkv file to work with.\n"
+  exit 2
+elif [ $# -gt 1 ]; then
+  echo -e 1>&2 "\n $0: You can only specify one argument to this script\n"
+  exit 2
+fi
+
+#Provide track info:
+echo -e "\n\e[1;33mTRACK IDs:\e[00m"
+mkvmerge -i $1
+	if [[ $? != 0 ]] ; then 
+		exit $?
+fi
+
+
+echo -e "\e[1;33m--------------------------\e[00m\nAdditional track info:\n"
+mplayer -vo null -ao null -frames 0 -v $1 | grep aid
+
+#Get input:
+echo -e -n "\nPlease type the TRACK ID(s) of the track(s) you want to keep seperated by a comma.\n\e[1;36mYou MUST take the \e[1;33mTrack ID\e[00m \e[1;36mfrom the \e[1;33mTRACK IDs\e[00m \e[1;36m(top) section!\e[00m\n" 
+read TRACK
+
+echo -e  "Cheers, cheers! All the audio tracks appart from  $TRACK will be deletad!\n \nShall we carry on?\n"
+
+#Options:
+PS3='Please enter your choice: '
+options=("Yes please" "Nah...")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Yes please")
+            echo "on it..."
+	    break
+            ;;
+        "Nah...")
+            echo "Ok then. Exiting..."
+	    exit 0
+            ;;
+        *) echo invalid option;;
+    esac
+done
+
+FILEBASE=${1%%????}
+
+mkvmerge -o $FILEBASE-edited.mkv -d 1 --audio-tracks $TRACK $1
+	mv $1 $FILEBASE-old.mkv
+	mv $FILEBASE-edited.mkv $FILEBASE.mkv
+
+
+echo -e "Would you like to \e[00;31mdelete\e[00m the original file? [yes/no] (no): " 
+read REPLY
+
+if [ "$REPLY" = "yes" ] ;
+  then rm $FILEBASE-old.mkv
+fi
