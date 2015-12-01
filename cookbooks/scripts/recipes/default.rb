@@ -6,7 +6,7 @@
 
 
 
-include_recipe 'iPhone_bak_files_renamer.rb'
-include_recipe 'mkv-remove-extra-tracks.rb'
-include_recipe 'treesize.rb'
+include_recipe 'scripts::iPhone_bak_files_renamer.rb'
+include_recipe 'scripts::mkv-remove-extra-tracks.rb'
+include_recipe 'scripts::treesize.rb'
 

@@ -6,11 +6,4 @@
 
 #template '/tmp/locale' do
  # source locale.erb
-include_recipe 'locale'
-cookbook_file '/etc/default/locale' do
-  source 'locale'
-  owner 'root'
-  group 'root'
-  mode '0644'
-end
-
+include_recipe 'system::locale'
