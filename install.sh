@@ -10,5 +10,5 @@ fi
 #dpkg -i /usr/src/chefdk_0.10.0-1_amd64.deb
 #echo -e "Installed.\nApplying cookbooks..."
 for cookbook in `ls ./cookbooks/`; do
- echo "sudo chef-client --local-mode --runlist 'recipe[$cookbook]'";
+ sudo chef-client --local-mode --runlist 'recipe[$cookbook]';
 done
