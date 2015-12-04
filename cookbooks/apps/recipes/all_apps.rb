@@ -44,7 +44,6 @@ end
 execute 'add_apps_to_launcher' do
   command '/bin/bash /tmp/launcher.sh'
   user 'grifonas'  
-  action :nothing
 end
 
 
