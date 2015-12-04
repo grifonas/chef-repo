@@ -1,0 +1,31 @@
+#!/bin/bash
+
+  case "$1" in
+    start)
+        echo -e "Connecting to VPN"
+        nmcli con up id HideIPVPN
+        IP=`curl -s http://ipecho.net/plain`
+        LOCATION=`curl -s http://whatismycountry.com/ | grep -A 2 "You are accessing this site from" | cut -d ">" -f3 | sed 's/<\/h3//g' | sed 's/\ //1'`
+        #LOCATION=`geoiplookup $IP`
+        echo -e "Our IP is $IP"
+        echo -e "Loction: $LOCATION"
+        notify-send -u normal "Connected to VPN" "Or IP is $IP.\nWe're in $LOCATION"
+        ;;
+    stop)
+        echo -e "Disconnecting from VPN "
+        nmcli con down id HideIPVPN
+        IP=`curl -s http://ipecho.net/plain`
+        LOCATION=`curl -s http://whatismycountry.com/ | grep -A 2 "You are accessing this site from" | cut -d ">" -f3 | sed 's/<\/h3//g' | sed 's/\ //1'`
+        #LOCATION=`geoiplookup $IP`
+        echo -e "Our IP is $IP"
+        echo -e "Location: $LOCATION"
+        notify-send -u normal "Disconnected from VPN" "Or IP is $IP.\nWe're in $LOCATION"
+        ;;
+       *)
+        ## If no parameters are given, print which are avaiable.
+        echo "Usage: $0 {start|stop}"
+        exit 1
+        ;;
+esac
+
+exit 0
