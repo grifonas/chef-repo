@@ -4,8 +4,15 @@
 #
 # Copyleft December 2015 Greg K.
 
+cookbook_file '/tmp/launcher.sh' do
+  source 'launcher.sh'
+  user 'grifonas'
+  group 'grifonas'
+  mode '0770'
+end
+
 execute 'add_apps_to_launcher' do
-  command '/usr/bin/gsettings set com.canonical.Unity.Launcher favorites "['application://google-chrome.desktop', 'application://firefox.desktop', 'application://nautilus.desktop', 'application://deluge.desktop', 'application://gnome-terminal.desktop', 'unity://running-apps', 'unity://devices', 'unity://expo-icon']"'
+  command '/bin/bash /tmp/launcher.sh'
   user 'grifonas'  
   action :nothing
 end
@@ -14,7 +21,7 @@ remote_file '/usr/local/src/google-chrome_amd64.deb' do
   source 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
   owner 'grifonas'
   group 'grifonas'
-  mode '0755'
+  mode '0770'
 end
 
 dpkg_package 'google-chrome' do
