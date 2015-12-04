@@ -61,6 +61,11 @@ end
 
 dpkg_package 'virtualbox' do
   source '/usr/local/src/virtualbox-5.0.10_amd64.deb'
+  notifies :run, 'execute[create_vm]', :immediately
+end
+
+execute 'create_vm' do
+  command '/usr/bin/VBoxManage createvm --name \'Hato-PC-Win\' --ostype "Windows7_64" --register'
 end
 
 package 'dkms'
