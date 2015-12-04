@@ -11,12 +11,6 @@ cookbook_file '/tmp/launcher.sh' do
   mode '0770'
 end
 
-execute 'add_apps_to_launcher' do
-  command '/bin/bash /tmp/launcher.sh'
-  user 'grifonas'  
-  action :nothing
-end
-
 remote_file '/usr/local/src/google-chrome_amd64.deb' do
   source 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
   owner 'grifonas'
@@ -26,8 +20,6 @@ end
 
 dpkg_package 'google-chrome' do
   source '/usr/local/src/google-chrome_amd64.deb'
-  action :nothing
-  notifies :run, 'execute[add_apps_to_launcher]', :delayed
 end
 
 package 'vim'
@@ -39,10 +31,7 @@ package 'avidemux'
 package 'flac'
 package 'lame'
 package 'ffmpeg' 
-package 'deluge' do
-  notifies :run, 'execute[google-chrome]', :delayed
-end
-
+package 'deluge'
 package 'deluge-webui'
 package 'deluge-console'
 package 'deluged'
@@ -51,4 +40,11 @@ service 'deluged' do
   supports :status => true
   action [:enable, :start]
 end
+
+execute 'add_apps_to_launcher' do
+  command '/bin/bash /tmp/launcher.sh'
+  user 'grifonas'  
+  action :nothing
+end
+
 
