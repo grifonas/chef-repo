@@ -31,6 +31,14 @@ end
 
 dpkg_package 'skype' do
   source '/usr/local/src/skype-ubuntu_i386.deb'
+  action :install
+  ignore_failure true
+  notifies :run, 'execute[apt-get-fix-dep]', :immediately
+end
+
+execute 'apt-get-fix-dep' do
+  command 'sudo apt-get -f install -y'
+  action :run
 end
 
 remote_file '/usr/local/src/plexmediaserver_amd64.deb' do
@@ -40,7 +48,7 @@ remote_file '/usr/local/src/plexmediaserver_amd64.deb' do
   mode '0770'
 end
 
-dpkg_package 'skype' do
+dpkg_package 'plex' do
   source '/usr/local/src/plexmediaserver_amd64.deb'
 end
 
