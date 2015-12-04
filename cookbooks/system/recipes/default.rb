@@ -7,3 +7,4 @@
 #template '/tmp/locale' do
  # source locale.erb
 include_recipe 'system::locale'
+include_recipe 'system::hideipvpn'
