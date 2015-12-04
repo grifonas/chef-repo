@@ -63,7 +63,7 @@ dpkg_package 'virtualbox' do
   source '/usr/local/src/virtualbox-5.0.10_amd64.deb'
 end
 
-
+package 'dkms'
 package 'vim'
 package 'aptitude'
 package 'mkvtoolnix'
