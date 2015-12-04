@@ -52,6 +52,18 @@ dpkg_package 'plex' do
   source '/usr/local/src/plexmediaserver_amd64.deb'
 end
 
+remote_file '/usr/local/src/virtualbox-5.0.10_amd64.deb' do
+  source 'http://download.virtualbox.org/virtualbox/5.0.10/virtualbox-5.0_5.0.10-104061~Ubuntu~wily_amd64.deb'
+  owner 'grifonas'
+  group 'grifonas'
+  mode '0770'
+end
+
+dpkg_package 'virtualbox' do
+  source '/usr/local/src/virtualbox-5.0.10_amd64.deb'
+end
+
+
 package 'vim'
 package 'aptitude'
 package 'mkvtoolnix'
