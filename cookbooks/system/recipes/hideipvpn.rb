@@ -10,7 +10,7 @@ template '/etc/NetworkManager/system-connections/HideIPVPN' do
   group 'root'
 end
 
-template '/usr/local/bin/vpn-connect.sh'
+template '/usr/local/bin/vpn-connect.sh' do
   source 'vpn_connect.sh.erb'
   mode '770'
   owner 'grifonas'
