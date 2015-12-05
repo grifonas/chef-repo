@@ -8,7 +8,7 @@ directory '/media/grifonas/120GBHDD' do
   owner 'grifonas'
   group 'grifonas'
   mode '700'
-  only if 'ls /dev/ | grep -q "sdb1"'
+  only_if 'ls /dev/ | grep -q "sdb1"'
   notifies :install, 'package[ntfs-3g]', :immediately
 end
 
