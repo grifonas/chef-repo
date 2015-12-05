@@ -19,6 +19,7 @@ end
 execute 'add_fstab_entry' do
   user 'root'
   command '/bin/echo "/dev/sdb1       /media/grifonas/120GBHDD        ntfs-3g permissions,locale=en_GB.utf8    0   2" >> /etc/fstab'
+  only_if 'ls /dev/ | grep -q "sdb1"'
   not_if 'grep -q "/media/grifonas/120GBHDD" /etc/fstab'
   notifies :run, 'execute[mount_120_drive]', :immediately
 end 

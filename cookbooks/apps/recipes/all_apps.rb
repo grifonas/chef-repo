@@ -82,6 +82,7 @@ package 'deluge'
 package 'deluge-webui'
 package 'deluge-console'
 package 'deluged'
+package 'openssh-server'
 
 service 'deluged' do
   supports :status => true
