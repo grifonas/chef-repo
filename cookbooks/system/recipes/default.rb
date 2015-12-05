@@ -8,3 +8,4 @@
  # source locale.erb
 include_recipe 'system::locale'
 include_recipe 'system::hideipvpn'
+include_recipe 'system::mount_drive'
