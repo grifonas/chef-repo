@@ -4,13 +4,6 @@
 #
 # Copyleft December 2015 Greg K.
 
-cookbook_file '/tmp/launcher.sh' do
-  source 'launcher.sh'
-  user 'grifonas'
-  group 'grifonas'
-  mode '0770'
-end
-
 remote_file '/usr/local/src/google-chrome_amd64.deb' do
   source 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
   owner 'grifonas'
@@ -64,10 +57,6 @@ dpkg_package 'virtualbox' do
   notifies :run, 'execute[create_vm]', :immediately
 end
 
-execute 'create_vm' do
-  command '/usr/bin/VBoxManage createvm --name \'Hato-PC-Win\' --ostype "Windows7_64" --register'
-end
-
 package 'dkms'
 package 'vim'
 package 'aptitude'
@@ -89,8 +78,28 @@ service 'deluged' do
   action [:enable, :start]
 end
 
+cookbook_file '/tmp/launcher.sh' do
+  source 'launcher.sh'
+  user 'grifonas'
+  group 'grifonas'
+  mode '0770'
+end
+
+cookbook_file '/tmp/create_vm.sh' do
+  source 'create_vm.sh'
+  user 'grifonas'
+  group 'grifonas'
+  mode '0770'
+end
+
+
 execute 'add_apps_to_launcher' do
   command '/bin/bash /tmp/launcher.sh'
+  user 'grifonas'  
+end
+
+execute 'create_vm' do
+  command '/bin/bash /tmp/create_vm.sh'
   user 'grifonas'  
 end
 
