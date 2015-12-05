@@ -2,10 +2,19 @@
 # Cookbook Name:: system
 # Recipe:: sshd
 #
-# Copyleft 2015 TGreg K.
+# Copyleft 2015 Greg K.
 
-openssh_server '/etc/ssh/sshd_config' do
-  Port 6758
-  AllowUsers 'grifonas@52.16.55.4 grifonas@localhost grifonas@10.0.0.1/24'
+package 'openssh-server'
+
+cookbook_file '/etc/ssh/sshd_config' do
+  source 'sshd_config'
+  owner 'root'
+  group 'root'
+  mode '0644'
 end
-  
+
+service 'ssh' do
+  supports :status => true
+  action [:enable, :restart]
+end
+

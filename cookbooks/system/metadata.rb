@@ -6,5 +6,4 @@ description 'Installs/Configures system'
 long_description 'Installs/Configures system'
 version '0.1.4'
 depends 'apt', '~> 2.9.2'
-depends 'sshd', '~> 1.1.3'
 
