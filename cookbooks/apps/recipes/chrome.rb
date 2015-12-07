@@ -18,7 +18,7 @@ end
 
 execute 'apt-get-clean' do
   command 'sudo apt-get clean'
-  actiopn :nothing
+  action :nothing
 end
 
 package 'libconf2-4' do
