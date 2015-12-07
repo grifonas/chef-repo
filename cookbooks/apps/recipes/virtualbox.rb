@@ -32,7 +32,7 @@ cookbook_file '/tmp/create_vm.sh' do
   user 'grifonas'
   group 'grifonas'
   mode '0770'
-  notifies :run 'execute[create_vm]', :immediately
+  notifies :run, 'execute[create_vm]', :immediately
 end
 
 execute 'create_vm' do
