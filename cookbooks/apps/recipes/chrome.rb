@@ -10,7 +10,9 @@ remote_file '/usr/local/src/google-chrome_amd64.deb' do
   mode '0770'
 end
 
-package 'libconf2-4' do
+
+dpkg_package 'google-chrome' do
+  source '/usr/local/src/google-chrome_amd64.deb'
   ignore_failure true
   notifies :run, 'execute[apt-get-fix-dep]', :immediately
 end
@@ -22,22 +24,6 @@ end
 
 execute 'apt-get-clean' do
   command 'sudo apt-get clean'
-end
-
-package 'libnss3-1d' do
-  ignore_failure true
-  notifies :run, 'execute[apt-get-fix-dep]', :immediately
-end
-
-package 'libxss1' do
-  ignore_failure true
-  notifies :run, 'execute[apt-get-fix-dep]', :immediately
-end
-
-dpkg_package 'google-chrome' do
-  source '/usr/local/src/google-chrome_amd64.deb'
-  ignore_failure true
-  notifies :run, 'execute[apt-get-fix-dep]', :immediately
 end
 
 
