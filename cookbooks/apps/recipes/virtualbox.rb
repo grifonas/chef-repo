@@ -36,7 +36,6 @@ end
 execute 'create_vm' do
   command '/bin/bash /tmp/create_vm.sh'
   user 'grifonas'  
-  action :nothing
 end
 
 package 'dkms'
