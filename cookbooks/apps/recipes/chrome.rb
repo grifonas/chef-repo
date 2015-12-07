@@ -10,20 +10,18 @@ remote_file '/usr/local/src/google-chrome_amd64.deb' do
   mode '0770'
 end
 
+package 'libconf2-4' do
+  ignore_failure true
+  notifies :run, 'execute[apt-get-fix-dep]', :immediately
+end
+
 execute 'apt-get-fix-dep' do
   command 'sudo apt-get -f install -y'
   notifies :run, 'execute[apt-get-clean]', :immediately
-  action :nothing
 end
 
 execute 'apt-get-clean' do
   command 'sudo apt-get clean'
-  action :nothing
-end
-
-package 'libconf2-4' do
-  ignore_failure true
-  notifies :run, 'execute[apt-get-fix-dep]', :immediately
 end
 
 package 'libnss3-1d' do
