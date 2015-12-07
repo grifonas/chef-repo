@@ -12,7 +12,13 @@ end
 
 execute 'apt-get-fix-dep' do
   command 'sudo apt-get -f install -y'
+  notifies :run, 'execute[apt-get-clean]', :immediately
   action :nothing
+end
+
+execute 'apt-get-clean' do
+  command 'sudo apt-get clean'
+  actiopn :nothing
 end
 
 package 'libconf2-4' do
