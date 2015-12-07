@@ -16,17 +16,17 @@ execute 'apt-get-fix-dep' do
 end
 
 package 'libconf2-4' do
-  ignore_failue true
+  ignore_failure true
   notifies :run, 'execute[apt-get-fix-dep]', :immediately
 end
 
 package 'libnss3-1d' do
-  ignore_failue true
+  ignore_failure true
   notifies :run, 'execute[apt-get-fix-dep]', :immediately
 end
 
 package 'libxss1' do
-  ignore_failue true
+  ignore_failure true
   notifies :run, 'execute[apt-get-fix-dep]', :immediately
 end
 
