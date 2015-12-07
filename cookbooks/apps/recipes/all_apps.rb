@@ -4,17 +4,6 @@
 #
 # Copyleft December 2015 Greg K.
 
-remote_file '/usr/local/src/google-chrome_amd64.deb' do
-  source 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
-  owner 'grifonas'
-  group 'grifonas'
-  mode '0770'
-end
-
-dpkg_package 'google-chrome' do
-  source '/usr/local/src/google-chrome_amd64.deb'
-end
-
 remote_file '/usr/local/src/skype-ubuntu_i386.deb' do
   source 'https://googledrive.com/host/0B9w4AKN_mSkcSURUM050YUI4dms/skype-ubuntu_i386.deb'
   owner 'grifonas'

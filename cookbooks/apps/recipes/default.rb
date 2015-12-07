@@ -4,3 +4,4 @@
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 include_recipe 'apps::all_apps'
+include_recipe 'apps::chrome'
