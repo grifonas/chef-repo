@@ -53,7 +53,6 @@ package 'aptitude'
 package 'mkvtoolnix'
 package 'mkvtoolnix-gui'
 package 'mplayer2'
-package 'avidemux'
 package 'flac'
 package 'lame'
 package 'ffmpeg' 
@@ -61,7 +60,6 @@ package 'deluge'
 package 'deluge-webui'
 package 'deluge-console'
 package 'deluged'
-package 'openssh-server'
 
 service 'deluged' do
   supports :status => true
