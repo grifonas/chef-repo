@@ -19,7 +19,7 @@ echo -e "ChefDK saved to /usr/src/chefdk_0.10.0-1_amd64.deb\n Installing ChefDK.
 dpkg -i /usr/src/chefdk_0.10.0-1_amd64.deb
 echo -e "Installed.\nApplying cookbooks..."
 cd /home/grifonas/Git/chef-repo
- sudo chef-client --local-mode --runlist 'recipe[system],recipe[scripts],recipe[apps],recipe[utils]'
+ sudo chef-client --local-mode --runlist 'recipe[system],recipe[scripts],recipe[apps]'
 
 echo "Running config scripts manually..."
 /bin/bash /tmp/create_vm.sh
