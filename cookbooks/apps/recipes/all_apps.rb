@@ -43,7 +43,8 @@ end
 
 dpkg_package 'virtualbox' do
   source '/usr/local/src/virtualbox-5.0.10_amd64.deb'
-  notifies :run, 'execute[create_vm]', :immediately
+  ignore_failure true
+  notifies :run, 'execute[apt-get-fix-dep]', :immediately
 end
 
 package 'dkms'
