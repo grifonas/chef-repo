@@ -2,14 +2,19 @@
 # Cookbook Name:: system
 # Recipe:: cosmetics
 #
-execute 'enable_workspaces' do
-  command 'gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ hsize 2'
-end
-
 cookbook_file '/usr/share/backgrounds/building.jpg' do
   source 'my_wallpaper.jpg'
 end 
 
-execute 'set_wallpaper' do
-  command 'gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/building.jpg'
+cookbook_file '/tmp/cosmetics.sh' do
+  source 'cosmetics.sh'
+  owner 'grifonas'
+  group 'grifonas'
+  mode '0755'
 end
+
+execute 'run_cometics' do
+  user 'grifonas'
+  command '/bin/bash /tmp/cosmetics.sh'
+end
+
