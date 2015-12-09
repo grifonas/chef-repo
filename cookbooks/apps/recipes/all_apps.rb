@@ -27,4 +27,6 @@ execute 'apt-get-clean' do
   command 'sudo apt-get clean'
 end
 
-
+execute 'apt-get-upgrade' do
+  command 'apt-get upgrade'
+end
