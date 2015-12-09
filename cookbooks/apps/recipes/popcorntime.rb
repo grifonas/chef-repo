@@ -23,4 +23,9 @@ execute 'fix_perms' do
   user 'root'
   command 'chown -R grifonas. /opt/popcorntime'
 end 
-  
+
+remote_file '/usr/src/libudev0_175-0ubuntu9_amd64.deb' do
+  source 'http://gr.archive.ubuntu.com/ubuntu/pool/main/u/udev/libudev0_175-0ubuntu9_amd64.deb'
+end
+
+dpkg_package '/usr/src/libudev0_175-0ubuntu9_amd64.deb' 
