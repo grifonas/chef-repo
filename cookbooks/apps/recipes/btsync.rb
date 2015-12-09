@@ -14,7 +14,7 @@ directory '/opt/btsync' do
   mode '0775'
 end
  
-execute 'untar_btsync'
+execute 'untar_btsync' do
   user 'grifonas'
   command '/bin/tar xzf /usr/src/BitTorrent-Sync_x64.tar.gz -C /opt/btsync'
 end
