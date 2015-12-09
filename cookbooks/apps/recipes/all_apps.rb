@@ -28,5 +28,5 @@ execute 'apt-get-clean' do
 end
 
 execute 'apt-get-upgrade' do
-  command 'apt-get upgrade'
+  command 'apt-get upgrade -y -q'
 end
