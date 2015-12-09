@@ -17,7 +17,7 @@ package 'deluge'
 package 'deluge-webui'
 package 'deluge-console'
 package 'deluged'
-
+package 'vlc'
 service 'deluged' do
   supports :status => true
   action [:enable, :start]
