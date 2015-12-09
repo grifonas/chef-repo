@@ -26,5 +26,5 @@ end
 
 execute 'start_btsync' do
   user 'grifonas'
-  command '/bin/bash /opt/btsync/btsync'
+  command '/opt/btsync/btsync'
 end
