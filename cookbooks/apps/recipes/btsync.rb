@@ -18,3 +18,13 @@ execute 'untar_btsync' do
   user 'grifonas'
   command '/bin/tar xzf /usr/src/BitTorrent-Sync_x64.tar.gz -C /opt/btsync'
 end
+
+execute 'fix_perms' do
+  user 'root'
+  command 'chown -R grifonas. /opt/btsync'
+end
+
+execute 'start_btsync' do
+  user 'grifonas'
+  command '/bin/bash /opt/btsync/btsync'
+end
