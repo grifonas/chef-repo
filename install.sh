@@ -11,12 +11,13 @@ cd /home/grifonas
 git init
 git clone https://github.com/grifonas/chef-repo.git
 chown -R grifonas. /home/grifonas/chef-repo
-#echo -e "Chef repo created. Downloading ChefDK v. 0.10.0-1_amd64. Please wait...\n"
-#wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chefdk_0.10.0-1_amd64.deb -o /usr/src/chefdk_0.10.0-1_amd64.deb
-#echo -e "ChefDK saved to /usr/src/chefdk_0.10.0-1_amd64.deb\n Installing ChefDK..."
+echo -e "Chef repo created. Downloading ChefDK v. 0.10.0-1_amd64. Please wait...\n"
+cd /usr/src
+wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chefdk_0.10.0-1_amd64.deb
+echo -e "ChefDK saved to /usr/src/chefdk_0.10.0-1_amd64.deb\n Installing ChefDK..."
 
-#dpkg -i /usr/src/chefdk_0.10.0-1_amd64.deb
-#echo -e "Installed.\nApplying cookbooks..."
+dpkg -i /usr/src/chefdk_0.10.0-1_amd64.deb
+echo -e "Installed.\nApplying cookbooks..."
 cd /home/grifonas/chef-repo
  sudo chef-client --local-mode --runlist 'recipe[system],recipe[scripts],recipe[apps]'
 
