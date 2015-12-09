@@ -35,7 +35,8 @@ end
 
 execute 'create_vm' do
   command '/bin/bash /tmp/create_vm.sh'
-  user 'grifonas'  
+  user 'grifonas' 
+  only_if 'ls /dev/ | grep -q "sdb1"' 
 end
 
 package 'dkms'
