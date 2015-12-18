@@ -55,7 +55,6 @@ mplayer -vo null -ao null -frames 0 -v $1 | grep aid
 #Get input:
 echo -e -n "\nPlease type the TRACK ID(s) of the track(s) you want to keep seperated by a comma.\n\e[1;36mYou MUST take the \e[1;33mTrack ID\e[00m \e[1;36mfrom the \e[1;33mTRACK IDs\e[00m \e[1;36m(top) section!\e[00m\n" 
 read TRACK
-
 echo -e  "Cheers, cheers! All the audio tracks appart from  $TRACK will be deletad!\n \nShall we carry on?\n"
 
 #Options:
@@ -78,7 +77,7 @@ done
 
 FILEBASE=${1%%????}
 
-mkvmerge -o $FILEBASE-edited.mkv -d 1 --audio-tracks $TRACK $1
+mkvmerge -o $FILEBASE-edited.mkv -d 0 --audio-tracks $TRACK $1
 	mv $1 $FILEBASE-old.mkv
 	mv $FILEBASE-edited.mkv $FILEBASE.mkv
 
