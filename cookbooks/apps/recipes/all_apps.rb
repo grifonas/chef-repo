@@ -4,7 +4,9 @@
 #
 # Copyleft December 2015 Greg K.
 
-
+execute 'apt-get_update' do
+  command 'sudo apt-get uptade'
+end
 package 'vim'
 package 'aptitude'
 package 'mkvtoolnix'
