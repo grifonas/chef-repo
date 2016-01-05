@@ -5,7 +5,7 @@
 # Copyleft December 2015 Greg K.
 
 execute 'apt-get_update' do
-  command 'sudo apt-get uptade'
+  command 'sudo apt-get update'
 end
 package 'vim'
 package 'aptitude'

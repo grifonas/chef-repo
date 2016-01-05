@@ -4,7 +4,7 @@ if [[ $EUID -ne 0 ]]; then
  exit 1
 fi
 echo -e "Installing Git"
-sudo apt-get update && sudo apt-get install git
+sudo apt-get update && sudo apt-get install -q -y git
 
 echo -e "Pulling chef-repo to /home/grifonas/chef-repo"
 cd /home/grifonas
