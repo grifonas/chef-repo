@@ -4,7 +4,7 @@
 #
 
 remote_file '/usr/local/src/virtualbox-5.0.10_amd64.deb' do
-  source 'http://download.virtualbox.org/virtualbox/5.0.10/virtualbox-5.0_5.0.10-104061~Ubuntu~wily_amd64.deb'
+  source 'http://download.virtualbox.org/virtualbox/5.0.12/virtualbox-5.0_5.0.12-104815~Ubuntu~wily_amd64.deb'
   owner 'grifonas'
   group 'grifonas'
   mode '0770'
