@@ -40,12 +40,16 @@ end
 cookbook_file '/opt/btsync/btsync.cnf' do
   source 'btsync.cnf'
 end
-
+#Creating upstart script:
 template '/etc/init/btsync.conf' do
   source 'btsync.upstart.conf'
   mode '775'
   owner 'grifonas'
   group 'grifonas'
+end
+#Creating a link to thge upstart script in /etc/init.d/ This will get autocompletion working (Debian policy):
+link '/etc/init.d/btsync' do
+  to '/etc/init/btsync.conf'
 end
 
 #execute 'update_rc' do
