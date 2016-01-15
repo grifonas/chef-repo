@@ -51,31 +51,31 @@
   "automatic": {
     "memory": {
       "swap": {
-        "cached": "0kB",
+        "cached": "623340kB",
         "total": "16773116kB",
-        "free": "16773116kB"
+        "free": "14227704kB"
       },
       "total": "12303496kB",
-      "free": "4039392kB",
-      "buffers": "1451304kB",
-      "cached": "3671084kB",
-      "active": "3605532kB",
-      "inactive": "4218996kB",
-      "dirty": "176kB",
-      "writeback": "0kB",
-      "anon_pages": "2702548kB",
-      "mapped": "365528kB",
-      "slab": "183872kB",
-      "slab_reclaimable": "135240kB",
-      "slab_unreclaim": "48632kB",
-      "page_tables": "54784kB",
+      "free": "1012524kB",
+      "buffers": "106228kB",
+      "cached": "4704072kB",
+      "active": "5902052kB",
+      "inactive": "4214072kB",
+      "dirty": "12380kB",
+      "writeback": "8kB",
+      "anon_pages": "4902256kB",
+      "mapped": "878440kB",
+      "slab": "318268kB",
+      "slab_reclaimable": "248956kB",
+      "slab_unreclaim": "69312kB",
+      "page_tables": "87068kB",
       "nfs_unstable": "0kB",
       "bounce": "0kB",
       "commit_limit": "22924864kB",
-      "committed_as": "9793916kB",
+      "committed_as": "19602932kB",
       "vmalloc_total": "34359738367kB",
-      "vmalloc_used": "337900kB",
-      "vmalloc_chunk": "34359394812kB"
+      "vmalloc_used": "340832kB",
+      "vmalloc_chunk": "34359393064kB"
     },
     "virtualization": {
       "systems": {
@@ -91,6 +91,18 @@
       "machine": "x86_64",
       "os": "GNU/Linux",
       "modules": {
+        "xt_comment": {
+          "size": "12504",
+          "refcount": "0"
+        },
+        "ip6table_filter": {
+          "size": "12815",
+          "refcount": "0"
+        },
+        "ip6_tables": {
+          "size": "27025",
+          "refcount": "1"
+        },
         "pci_stub": {
           "size": "12622",
           "refcount": "1"
@@ -105,11 +117,11 @@
         },
         "vboxnetflt": {
           "size": "27830",
-          "refcount": "0"
+          "refcount": "1"
         },
         "vboxdrv": {
           "size": "410066",
-          "refcount": "3"
+          "refcount": "6"
         },
         "xt_conntrack": {
           "size": "12760",
@@ -177,7 +189,7 @@
         },
         "x_tables": {
           "size": "34059",
-          "refcount": "6"
+          "refcount": "9"
         },
         "snd_hda_codec_hdmi": {
           "size": "46207",
@@ -455,13 +467,13 @@
       },
       "tmpfs": {
         "kb_size": "1230352",
-        "kb_used": "2004",
-        "kb_available": "1228348",
+        "kb_used": "2020",
+        "kb_available": "1228332",
         "percent_used": "1%",
         "mount": "/run",
         "total_inodes": "1537937",
-        "inodes_used": "627",
-        "inodes_available": "1537310",
+        "inodes_used": "631",
+        "inodes_available": "1537306",
         "inodes_percent_used": "1%",
         "fs_type": "tmpfs",
         "mount_options": [
@@ -474,14 +486,14 @@
       },
       "/dev/sda1": {
         "kb_size": "41051712",
-        "kb_used": "31106596",
-        "kb_available": "7836752",
-        "percent_used": "80%",
+        "kb_used": "31688040",
+        "kb_available": "7255308",
+        "percent_used": "82%",
         "mount": "/",
         "total_inodes": "2616320",
-        "inodes_used": "1425140",
-        "inodes_available": "1191180",
-        "inodes_percent_used": "55%",
+        "inodes_used": "1439634",
+        "inodes_available": "1176686",
+        "inodes_percent_used": "56%",
         "fs_type": "ext4",
         "mount_options": [
           "rw",
@@ -491,13 +503,13 @@
       },
       "none": {
         "kb_size": "102400",
-        "kb_used": "40",
-        "kb_available": "102360",
+        "kb_used": "84",
+        "kb_available": "102316",
         "percent_used": "1%",
         "mount": "/sys/fs/pstore",
         "total_inodes": "1537937",
-        "inodes_used": "26",
-        "inodes_available": "1537911",
+        "inodes_used": "37",
+        "inodes_available": "1537900",
         "inodes_percent_used": "1%",
         "fs_type": "pstore",
         "mount_options": [
@@ -506,13 +518,13 @@
       },
       "/dev/sdb1": {
         "kb_size": "117218240",
-        "kb_used": "100659148",
-        "kb_available": "16559092",
-        "percent_used": "86%",
+        "kb_used": "90148648",
+        "kb_available": "27069592",
+        "percent_used": "77%",
         "mount": "/media/grifonas/120GBHDD",
-        "total_inodes": "16591860",
-        "inodes_used": "78",
-        "inodes_available": "16591782",
+        "total_inodes": "27102360",
+        "inodes_used": "77",
+        "inodes_available": "27102283",
         "inodes_percent_used": "1%",
         "fs_type": "ntfs",
         "mount_options": [
@@ -527,13 +539,13 @@
       },
       "/dev/sdc1": {
         "kb_size": "1922726704",
-        "kb_used": "1915129424",
-        "kb_available": "7580896",
-        "percent_used": "100%",
+        "kb_used": "1859302828",
+        "kb_available": "63407492",
+        "percent_used": "97%",
         "mount": "/media/grifonas/2TBHDD",
         "total_inodes": "122101760",
-        "inodes_used": "126985",
-        "inodes_available": "121974775",
+        "inodes_used": "127336",
+        "inodes_available": "121974424",
         "inodes_percent_used": "1%",
         "fs_type": "ext4",
         "mount_options": [
@@ -547,13 +559,13 @@
       },
       "/dev/sdd1": {
         "kb_size": "1922728816",
-        "kb_used": "1795788140",
-        "kb_available": "29248616",
-        "percent_used": "99%",
+        "kb_used": "1755288552",
+        "kb_available": "69748204",
+        "percent_used": "97%",
         "mount": "/media/grifonas/2TBHDD-2",
         "total_inodes": "122101760",
-        "inodes_used": "14018",
-        "inodes_available": "122087742",
+        "inodes_used": "14630",
+        "inodes_available": "122087130",
         "inodes_percent_used": "1%",
         "fs_type": "ext4",
         "mount_options": [
@@ -714,25 +726,22 @@
           },
           "state": "up",
           "arp": {
-            "10.0.0.3": "3c:e0:72:e1:cb:54",
-            "10.0.0.1": "e8:40:f2:3d:11:92",
-            "10.0.0.5": "70:3e:ac:c7:55:f4",
-            "10.0.0.138": "20:4e:7f:12:f0:3e"
+            "10.0.0.8": "90:f1:aa:dc:58:6d",
+            "10.0.0.2": "f8:27:93:2d:af:45",
+            "10.0.0.138": "20:4e:7f:12:f0:3e",
+            "10.0.0.1": "e8:40:f2:3d:11:92"
           },
           "routes": [
             {
               "destination": "default",
               "family": "inet",
-              "via": "10.0.0.138",
-              "proto": "static"
+              "via": "10.0.0.138"
             },
             {
               "destination": "10.0.0.0/24",
               "family": "inet",
               "scope": "link",
-              "metric": "1",
-              "proto": "kernel",
-              "src": "10.0.0.6"
+              "metric": "1"
             },
             {
               "destination": "fe80::/64",
@@ -768,9 +777,50 @@
             {
               "destination": "172.17.0.0/16",
               "family": "inet",
-              "scope": "link",
-              "proto": "kernel",
-              "src": "172.17.0.1"
+              "scope": "link"
+            }
+          ]
+        },
+        "vboxnet0": {
+          "type": "vboxnet",
+          "number": "0",
+          "mtu": "1500",
+          "flags": [
+            "BROADCAST",
+            "MULTICAST",
+            "UP",
+            "LOWER_UP"
+          ],
+          "encapsulation": "Ethernet",
+          "addresses": {
+            "0A:00:27:00:00:00": {
+              "family": "lladdr"
+            },
+            "192.168.33.1": {
+              "family": "inet",
+              "prefixlen": "24",
+              "netmask": "255.255.255.0",
+              "broadcast": "192.168.33.255",
+              "scope": "Global"
+            },
+            "fe80::800:27ff:fe00:0": {
+              "family": "inet6",
+              "prefixlen": "64",
+              "scope": "Link"
+            }
+          },
+          "state": "unknown",
+          "routes": [
+            {
+              "destination": "192.168.33.0/24",
+              "family": "inet",
+              "scope": "link"
+            },
+            {
+              "destination": "fe80::/64",
+              "family": "inet6",
+              "metric": "256",
+              "proto": "kernel"
             }
           ]
         }
@@ -783,15 +833,15 @@
         "interfaces": {
           "lo": {
             "rx": {
-              "bytes": "18626133",
-              "packets": "100787",
+              "bytes": "2491237041",
+              "packets": "9025114",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
             },
             "tx": {
-              "bytes": "18626133",
-              "packets": "100787",
+              "bytes": "2491237041",
+              "packets": "9025114",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
@@ -801,16 +851,16 @@
           "eth0": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "2756025608",
-              "packets": "2012417",
+              "bytes": "60502293830",
+              "packets": "84979537",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "106909450",
-              "packets": "1228217",
+              "bytes": "69901244847",
+              "packets": "77452300",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -832,13 +882,31 @@
               "carrier": "0",
               "collisions": "0"
             }
+          },
+          "vboxnet0": {
+            "tx": {
+              "queuelen": "1000",
+              "bytes": "8066349",
+              "packets": "53379",
+              "errors": "0",
+              "drop": "0",
+              "carrier": "0",
+              "collisions": "0"
+            },
+            "rx": {
+              "bytes": "0",
+              "packets": "0",
+              "errors": "0",
+              "drop": "0",
+              "overrun": "0"
+            }
           }
         }
       }
     },
     "ipaddress": "10.0.0.6",
     "macaddress": "90:2B:34:15:70:79",
-    "ip6address": "fe80::922b:34ff:fe15:7079",
+    "ip6address": "fe80::800:27ff:fe00:0",
     "cpu": {
       "0": {
         "vendor_id": "AuthenticAMD",
@@ -846,7 +914,7 @@
         "model": "1",
         "model_name": "AMD FX(tm)-8150 Eight-Core Processor",
         "stepping": "2",
-        "mhz": "1400.000",
+        "mhz": "2800.000",
         "cache_size": "2048 KB",
         "physical_id": "0",
         "core_id": "0",
@@ -1128,7 +1196,7 @@
         "model": "1",
         "model_name": "AMD FX(tm)-8150 Eight-Core Processor           ",
         "stepping": "2",
-        "mhz": "2800.000",
+        "mhz": "1400.000",
         "cache_size": "2048 KB",
         "physical_id": "0",
         "core_id": "4",
@@ -1316,7 +1384,7 @@
         "model": "1",
         "model_name": "AMD FX(tm)-8150 Eight-Core Processor           ",
         "stepping": "2",
-        "mhz": "1400.000",
+        "mhz": "2800.000",
         "cache_size": "2048 KB",
         "physical_id": "0",
         "core_id": "5",
@@ -1640,10 +1708,10 @@
         "builddate": "Jun 22 2015, 17:58:13"
       }
     },
-    "uptime_seconds": 41253,
-    "uptime": "11 hours 27 minutes 33 seconds",
-    "idletime_seconds": 327439,
-    "idletime": "3 days 18 hours 57 minutes 19 seconds",
+    "uptime_seconds": 1346165,
+    "uptime": "15 days 13 hours 56 minutes 05 seconds",
+    "idletime_seconds": 10010286,
+    "idletime": "115 days 20 hours 38 minutes 06 seconds",
     "etc": {
       "passwd": {
         "root": {
@@ -2598,12 +2666,12 @@
         },
         "tmpfs": {
           "kb_size": "1230352",
-          "kb_used": "2004",
-          "kb_available": "1228348",
+          "kb_used": "2020",
+          "kb_available": "1228332",
           "percent_used": "1%",
           "total_inodes": "1537937",
-          "inodes_used": "627",
-          "inodes_available": "1537310",
+          "inodes_used": "631",
+          "inodes_available": "1537306",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -2619,13 +2687,13 @@
         },
         "/dev/sda1": {
           "kb_size": "41051712",
-          "kb_used": "31106596",
-          "kb_available": "7836752",
-          "percent_used": "80%",
+          "kb_used": "31688040",
+          "kb_available": "7255308",
+          "percent_used": "82%",
           "total_inodes": "2616320",
-          "inodes_used": "1425140",
-          "inodes_available": "1191180",
-          "inodes_percent_used": "55%",
+          "inodes_used": "1439634",
+          "inodes_available": "1176686",
+          "inodes_percent_used": "56%",
           "fs_type": "ext4",
           "mount_options": [
             "rw",
@@ -2638,12 +2706,12 @@
         },
         "none": {
           "kb_size": "102400",
-          "kb_used": "40",
-          "kb_available": "102360",
+          "kb_used": "84",
+          "kb_available": "102316",
           "percent_used": "1%",
           "total_inodes": "1537937",
-          "inodes_used": "26",
-          "inodes_available": "1537911",
+          "inodes_used": "37",
+          "inodes_available": "1537900",
           "inodes_percent_used": "1%",
           "fs_type": "pstore",
           "mount_options": [
@@ -2662,12 +2730,12 @@
         },
         "/dev/sdb1": {
           "kb_size": "117218240",
-          "kb_used": "100659148",
-          "kb_available": "16559092",
-          "percent_used": "86%",
-          "total_inodes": "16591860",
-          "inodes_used": "78",
-          "inodes_available": "16591782",
+          "kb_used": "90148648",
+          "kb_available": "27069592",
+          "percent_used": "77%",
+          "total_inodes": "27102360",
+          "inodes_used": "77",
+          "inodes_available": "27102283",
           "inodes_percent_used": "1%",
           "fs_type": "ntfs",
           "mount_options": [
@@ -2685,12 +2753,12 @@
         },
         "/dev/sdc1": {
           "kb_size": "1922726704",
-          "kb_used": "1915129424",
-          "kb_available": "7580896",
-          "percent_used": "100%",
+          "kb_used": "1859303936",
+          "kb_available": "63406384",
+          "percent_used": "97%",
           "total_inodes": "122101760",
-          "inodes_used": "126985",
-          "inodes_available": "121974775",
+          "inodes_used": "127336",
+          "inodes_available": "121974424",
           "inodes_percent_used": "1%",
           "fs_type": "ext4",
           "mount_options": [
@@ -2707,12 +2775,12 @@
         },
         "/dev/sdd1": {
           "kb_size": "1922728816",
-          "kb_used": "1795788140",
-          "kb_available": "29248616",
-          "percent_used": "99%",
+          "kb_used": "1755288552",
+          "kb_available": "69748204",
+          "percent_used": "97%",
           "total_inodes": "122101760",
-          "inodes_used": "14018",
-          "inodes_available": "122087742",
+          "inodes_used": "14630",
+          "inodes_available": "122087130",
           "inodes_percent_used": "1%",
           "fs_type": "ext4",
           "mount_options": [
@@ -2887,12 +2955,12 @@
         },
         "/run": {
           "kb_size": "1230352",
-          "kb_used": "2004",
-          "kb_available": "1228348",
+          "kb_used": "2020",
+          "kb_available": "1228332",
           "percent_used": "1%",
           "total_inodes": "1537937",
-          "inodes_used": "627",
-          "inodes_available": "1537310",
+          "inodes_used": "631",
+          "inodes_available": "1537306",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -2908,13 +2976,13 @@
         },
         "/": {
           "kb_size": "41051712",
-          "kb_used": "31106596",
-          "kb_available": "7836752",
-          "percent_used": "80%",
+          "kb_used": "31688040",
+          "kb_available": "7255308",
+          "percent_used": "82%",
           "total_inodes": "2616320",
-          "inodes_used": "1425140",
-          "inodes_available": "1191180",
-          "inodes_percent_used": "55%",
+          "inodes_used": "1439634",
+          "inodes_available": "1176686",
+          "inodes_percent_used": "56%",
           "fs_type": "ext4",
           "mount_options": [
             "rw",
@@ -2969,12 +3037,12 @@
         },
         "/run/shm": {
           "kb_size": "6151748",
-          "kb_used": "28472",
-          "kb_available": "6123276",
-          "percent_used": "1%",
+          "kb_used": "144064",
+          "kb_available": "6007684",
+          "percent_used": "3%",
           "total_inodes": "1537937",
-          "inodes_used": "81",
-          "inodes_available": "1537856",
+          "inodes_used": "125",
+          "inodes_available": "1537812",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -2988,12 +3056,12 @@
         },
         "/run/user": {
           "kb_size": "102400",
-          "kb_used": "40",
-          "kb_available": "102360",
+          "kb_used": "84",
+          "kb_available": "102316",
           "percent_used": "1%",
           "total_inodes": "1537937",
-          "inodes_used": "26",
-          "inodes_available": "1537911",
+          "inodes_used": "37",
+          "inodes_available": "1537900",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -3010,12 +3078,12 @@
         },
         "/media/grifonas/120GBHDD": {
           "kb_size": "117218240",
-          "kb_used": "100659148",
-          "kb_available": "16559092",
-          "percent_used": "86%",
-          "total_inodes": "16591860",
-          "inodes_used": "78",
-          "inodes_available": "16591782",
+          "kb_used": "90148648",
+          "kb_available": "27069592",
+          "percent_used": "77%",
+          "total_inodes": "27102360",
+          "inodes_used": "77",
+          "inodes_available": "27102283",
           "inodes_percent_used": "1%",
           "fs_type": "ntfs",
           "mount_options": [
@@ -3033,12 +3101,12 @@
         },
         "/media/grifonas/2TBHDD": {
           "kb_size": "1922726704",
-          "kb_used": "1915129424",
-          "kb_available": "7580896",
-          "percent_used": "100%",
+          "kb_used": "1859303936",
+          "kb_available": "63406384",
+          "percent_used": "97%",
           "total_inodes": "122101760",
-          "inodes_used": "126985",
-          "inodes_available": "121974775",
+          "inodes_used": "127336",
+          "inodes_available": "121974424",
           "inodes_percent_used": "1%",
           "fs_type": "ext4",
           "mount_options": [
@@ -3055,12 +3123,12 @@
         },
         "/media/grifonas/2TBHDD-2": {
           "kb_size": "1922728816",
-          "kb_used": "1795788140",
-          "kb_available": "29248616",
-          "percent_used": "99%",
+          "kb_used": "1755288552",
+          "kb_available": "69748204",
+          "percent_used": "97%",
           "total_inodes": "122101760",
-          "inodes_used": "14018",
-          "inodes_available": "122087742",
+          "inodes_used": "14630",
+          "inodes_available": "122087130",
           "inodes_percent_used": "1%",
           "fs_type": "ext4",
           "mount_options": [
@@ -3319,13 +3387,13 @@
         "tmpfs,/run": {
           "device": "tmpfs",
           "kb_size": "1230352",
-          "kb_used": "2004",
-          "kb_available": "1228348",
+          "kb_used": "2020",
+          "kb_available": "1228332",
           "percent_used": "1%",
           "mount": "/run",
           "total_inodes": "1537937",
-          "inodes_used": "627",
-          "inodes_available": "1537310",
+          "inodes_used": "631",
+          "inodes_available": "1537306",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -3339,14 +3407,14 @@
         "/dev/sda1,/": {
           "device": "/dev/sda1",
           "kb_size": "41051712",
-          "kb_used": "31106596",
-          "kb_available": "7836752",
-          "percent_used": "80%",
+          "kb_used": "31688040",
+          "kb_available": "7255308",
+          "percent_used": "82%",
           "mount": "/",
           "total_inodes": "2616320",
-          "inodes_used": "1425140",
-          "inodes_available": "1191180",
-          "inodes_percent_used": "55%",
+          "inodes_used": "1439634",
+          "inodes_available": "1176686",
+          "inodes_percent_used": "56%",
           "fs_type": "ext4",
           "mount_options": [
             "rw",
@@ -3393,13 +3461,13 @@
         "none,/run/shm": {
           "device": "none",
           "kb_size": "6151748",
-          "kb_used": "28472",
-          "kb_available": "6123276",
-          "percent_used": "1%",
+          "kb_used": "144064",
+          "kb_available": "6007684",
+          "percent_used": "3%",
           "mount": "/run/shm",
           "total_inodes": "1537937",
-          "inodes_used": "81",
-          "inodes_available": "1537856",
+          "inodes_used": "125",
+          "inodes_available": "1537812",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -3411,13 +3479,13 @@
         "none,/run/user": {
           "device": "none",
           "kb_size": "102400",
-          "kb_used": "40",
-          "kb_available": "102360",
+          "kb_used": "84",
+          "kb_available": "102316",
           "percent_used": "1%",
           "mount": "/run/user",
           "total_inodes": "1537937",
-          "inodes_used": "26",
-          "inodes_available": "1537911",
+          "inodes_used": "37",
+          "inodes_available": "1537900",
           "inodes_percent_used": "1%",
           "fs_type": "tmpfs",
           "mount_options": [
@@ -3432,13 +3500,13 @@
         "/dev/sdb1,/media/grifonas/120GBHDD": {
           "device": "/dev/sdb1",
           "kb_size": "117218240",
-          "kb_used": "100659148",
-          "kb_available": "16559092",
-          "percent_used": "86%",
+          "kb_used": "90148648",
+          "kb_available": "27069592",
+          "percent_used": "77%",
           "mount": "/media/grifonas/120GBHDD",
-          "total_inodes": "16591860",
-          "inodes_used": "78",
-          "inodes_available": "16591782",
+          "total_inodes": "27102360",
+          "inodes_used": "77",
+          "inodes_available": "27102283",
           "inodes_percent_used": "1%",
           "fs_type": "ntfs",
           "mount_options": [
@@ -3454,13 +3522,13 @@
         "/dev/sdc1,/media/grifonas/2TBHDD": {
           "device": "/dev/sdc1",
           "kb_size": "1922726704",
-          "kb_used": "1915129424",
-          "kb_available": "7580896",
-          "percent_used": "100%",
+          "kb_used": "1859303936",
+          "kb_available": "63406384",
+          "percent_used": "97%",
           "mount": "/media/grifonas/2TBHDD",
           "total_inodes": "122101760",
-          "inodes_used": "126985",
-          "inodes_available": "121974775",
+          "inodes_used": "127336",
+          "inodes_available": "121974424",
           "inodes_percent_used": "1%",
           "fs_type": "ext4",
           "mount_options": [
@@ -3475,13 +3543,13 @@
         "/dev/sdd1,/media/grifonas/2TBHDD-2": {
           "device": "/dev/sdd1",
           "kb_size": "1922728816",
-          "kb_used": "1795788140",
-          "kb_available": "29248616",
-          "percent_used": "99%",
+          "kb_used": "1755288552",
+          "kb_available": "69748204",
+          "percent_used": "97%",
           "mount": "/media/grifonas/2TBHDD-2",
           "total_inodes": "122101760",
-          "inodes_used": "14018",
-          "inodes_available": "122087742",
+          "inodes_used": "14630",
+          "inodes_available": "122087130",
           "inodes_percent_used": "1%",
           "fs_type": "ext4",
           "mount_options": [
@@ -4018,7 +4086,7 @@
     "command": {
       "ps": "ps -ef"
     },
-    "ohai_time": 1451326034.505665,
+    "ohai_time": 1452630945.7117245,
     "hostname": "HATO-PC2",
     "machinename": "HATO-PC2",
     "fqdn": "HATO-PC2",
@@ -4026,12 +4094,10 @@
     "cloud_v2": null,
     "init_package": "init",
     "recipes": [
-      "system::antivirus",
-      "apt::default",
-      "system::email_reports"
+      "system::test"
     ],
     "expanded_run_list": [
-      "system::antivirus"
+      "system::test"
     ],
     "roles": [
 
@@ -4046,6 +4112,6 @@
     }
   },
   "run_list": [
-    "recipe[system::antivirus]"
+    "recipe[system::test]"
   ]
 }
