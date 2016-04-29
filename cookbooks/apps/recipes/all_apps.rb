@@ -11,7 +11,9 @@ package 'vim'
 package 'aptitude'
 package 'mkvtoolnix'
 package 'mkvtoolnix-gui'
-package 'mplayer2'
+package 'mplayer2' do
+  ignore_failure true
+end
 package 'flac'
 package 'lame'
 package 'ffmpeg' 

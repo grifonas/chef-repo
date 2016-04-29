@@ -1,0 +1,29 @@
+﻿platform: Linux 4.4.0-21-generic #37-Ubuntu SMP Mon Apr 18 18:33:37 UTC 2016 x86_64
+version: 2.3.6.378
+[20160429 14:59:01.681] Configuration from file "" has been applied
+[20160429 14:59:01.695] ZIP: Can't locate [version] in zip, error -100.
+[20160429 14:59:01.703] PLC[0x0000000002c5a430] binding on 0.0.0.0:16849
+[20160429 14:59:01.703] Socket[0x0000000002c5a430][7] bound listening socket 7 to IP 0.0.0.0:16849
+[20160429 14:59:01.703] UDP: bound listening socket 8 to IP 0.0.0.0:16849
+[20160429 14:59:01.703] Socket[0x0000000002c5bca0][9] bound listening socket 9 to IP 127.0.0.1:8888
+[20160429 14:59:01.703] UPNP: Using IP address 10.0.2.15
+[20160429 14:59:01.734] test sha1: AE5BD8EFEA5322C4D9986D06680A781392F9A642
+[20160429 14:59:01.737] test sha2: 630DCD2966C4336691125448BBB25B4FF412A49C732DB2C8ABC1B8581BD710DD
+[20160429 14:59:01.744] test aes: 0A940BB5416EF045F1C39458C653EA5A07FEEF74E1D5036E900EEE118E949293
+[20160429 14:59:01.744] My PeerID: 1032BF513434569B5EEA677CCCFE31A28F82C883
+[20160429 14:59:01.744] LC: LoadLicenses: there is no pro license
+[20160429 14:59:01.745] setup socket 14 for local peer discovery for 127.0.0.1: success
+[20160429 14:59:01.746] setup socket 15 for local peer discovery for 10.0.2.15: success
+[20160429 14:59:03.755] UPnP: Device error "http://10.0.2.15:32469/DeviceDescription.xml": (-2) 
+[20160429 14:59:05.252] Debug log mask has been set to FFFFFFFF
+[20160429 14:59:05.252] Features mask has been set to 0
+[20160429 14:59:06.251] UPnP: Could not map UPnP Port on this pass, retrying.
+[20160429 14:59:07.937] UPnP: Device error "http://10.0.2.15:32469/DeviceDescription.xml": (-2) 
+[20160429 14:59:09.017] ZIP: Can't locate [css/style.css] in zip, error -100.
+[20160429 14:59:11.012] UPnP: Could not map UPnP Port on this pass, retrying.
+[20160429 14:59:14.017] NAT-PMP: Unable to map port with NAT-PMP.
+[20160429 14:59:15.021] UPnP: Device error "http://10.0.2.15:32469/DeviceDescription.xml": (-2) 
+[20160429 14:59:16.023] UPnP: Could not map UPnP Port on this pass, retrying.
+[20160429 14:59:20.036] UPnP: Device error "http://10.0.2.15:32469/DeviceDescription.xml": (-2) 
+[20160429 14:59:21.037] UPnP: Unable to map port 10.0.2.15:16849 with UPnP.
+[20160429 14:59:33.115] OpenSSL: Loaded X509 trusted CA from "/etc/ssl/certs/ca-certificates.crt"
