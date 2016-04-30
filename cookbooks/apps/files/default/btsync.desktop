@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=/opt/btsync/btsync
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_GB]=BTSync
+Name=BTSync
+Comment[en_GB]=BitTorrent Sync
+Comment=BitTorrent Sync

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/deluge-web
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_GB]=Deluge-Web
+Name=Deluge-Web
+Comment[en_GB]=Starting Deluged web UI.
+Comment=Starting Deluged web UI.

@@ -1,8 +1,6 @@
 ---
 driver:
   name: vagrant
-  network:
-    - ["private_network", {ip: "192.168.33.33"}]
 
 provisioner:
   name: chef_zero
@@ -14,12 +12,9 @@ provisioner:
 
 platforms:
   - name: ubuntu-14.04
-    driver:
-      customize:
-        memory: 512
 
 suites:
   - name: default
     run_list:
-      - recipe[apps::vagrant]
+      - recipe[vpnbox::vpnbox]
     attributes:

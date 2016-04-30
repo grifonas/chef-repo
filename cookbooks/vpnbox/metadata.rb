@@ -1,0 +1,7 @@
+name 'vpnbox'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures vpnbox'
+long_description 'Installs/Configures vpnbox'
+version '0.1.2'

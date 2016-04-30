@@ -3,15 +3,15 @@
 # Recipe:: virtualbox
 #
 
-remote_file '/usr/local/src/virtualbox-5.0.10_amd64.deb' do
-  source 'http://download.virtualbox.org/virtualbox/5.0.12/virtualbox-5.0_5.0.12-104815~Ubuntu~wily_amd64.deb'
+remote_file '/usr/local/src/virtualbox-5.0.20_amd64.deb' do
+  source 'http://download.virtualbox.org/virtualbox/5.0.20/virtualbox-5.0_5.0.20-106931~Ubuntu~xenial_amd64.deb'
   owner 'grifonas'
   group 'grifonas'
   mode '0770'
 end
 
 dpkg_package 'virtualbox' do
-  source '/usr/local/src/virtualbox-5.0.10_amd64.deb'
+  source '/usr/local/src/virtualbox-5.0.20_amd64.deb'
   ignore_failure true
   notifies :run, 'execute[apt-get-fix-dep]', :immediately
 end
