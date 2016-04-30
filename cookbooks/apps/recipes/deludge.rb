@@ -18,3 +18,9 @@ service 'deluged' do
   supports :status => true
   action [:enable, :start]
 end
+
+# Set Deluge as default:
+execute 'set_deluge_default' do
+  command 'xdg-mime default deluge.desktop x-scheme-handler/magnet'
+  user 'grifonas'
+end
