@@ -29,7 +29,7 @@ cookbook_file '/opt/btsync/btsync.cnf' do
 end
 
 # Adding to startup applications
-directory /home/grifonas/.config/autostart do
+directory '/home/grifonas/.config/autostart' do
   recursive true
   owner 'grifonas'
   group 'grifonas'
