@@ -17,13 +17,14 @@ fi
 if [[ $1 == "jpg" ]]; then
  EXT=JPG
  check_if_exist
- echo "Here's what's going to happen:"
- for i in `ls | grep JPG`; do echo "mv $i `exiftool $i | grep "File Modification Date/Time" | awk -F " " '{print $5"_"$6}' | sed 's/:/-/g' | cut -d "+" -f1`.jpg"; done
- echo "Shall we proceed? [yes/no]"
+ echo "Here's what's going to happen. Review and choose [yes/no]."
+ sleep 1
+ for i in `ls | grep JPG`; do echo "mv $i `exiftool $i | grep "File Modification Date/Time" | awk -F " " '{print $5"_"$6}' | sed 's/:/-/g' | cut -d "+" -f1`.jpg" & done
+# echo "Shall we proceed? [yes/no]"
  read ANSWER
 
   if [[ $ANSWER == "yes" ]]; then 
-   for i in `ls | grep JPG`; do echo "mv $i `exiftool $i | grep "File Modification Date/Time" | awk -F " " '{print $5"_"$6}' | sed 's/:/-/g' | cut -d "+" -f1`.jpg"; mv $i `exiftool $i | grep "File Modification Date/Time" | awk -F " " '{print $5"_"$6}' | sed 's/:/-/g' | cut -d "+" -f1`.jpg; done
+   for i in `ls | grep JPG`; do echo "mv $i `exiftool $i | grep "File Modification Date/Time" | awk -F " " '{print $5"_"$6}' | sed 's/:/-/g' | cut -d "+" -f1`.jpg"; mv $i `exiftool $i | grep "File Modification Date/Time" | awk -F " " '{print $5"_"$6}' | sed 's/:/-/g' | cut -d "+" -f1`.jpg & done
   else 
    echo "OK then."
    exit 0
@@ -32,13 +33,13 @@ if [[ $1 == "jpg" ]]; then
 elif [[ $1 == "png" ]]; then
  EXT=PNG
  check_if_exist
- echo "Here's what's going to happen:"
- for i in `ls | grep PNG`; do echo "mv $i `exiftool $i | grep "File Modification Date/Time" | awk -F " " '{print $5"_"$6}' | sed 's/:/-/g' | cut -d "+" -f1`.png"; done
- echo "Shall we proceed? [yes/no]"
+ echo "Here's what's going to happen. Review and choose [yes/no]."
+ for i in `ls | grep PNG`; do echo "mv $i `exiftool $i | grep "File Modification Date/Time" | awk -F " " '{print $5"_"$6}' | sed 's/:/-/g' | cut -d "+" -f1`.png" & done
+ #echo "Shall we proceed? [yes/no]"
  read ANSWER
 
   if [[ $ANSWER == "yes" ]]; then 
-   for i in `ls | grep PNG`; do echo "mv $i `exiftool $i | grep "File Modification Date/Time" | awk -F " " '{print $5"_"$6}' | sed 's/:/-/g' | cut -d "+" -f1`.png"; mv $i `exiftool $i | grep "File Modification Date/Time" | awk -F " " '{print $5"_"$6}' | sed 's/:/-/g' | cut -d "+" -f1`.png; done
+   for i in `ls | grep PNG`; do echo "mv $i `exiftool $i | grep "File Modification Date/Time" | awk -F " " '{print $5"_"$6}' | sed 's/:/-/g' | cut -d "+" -f1`.png"; mv $i `exiftool $i | grep "File Modification Date/Time" | awk -F " " '{print $5"_"$6}' | sed 's/:/-/g' | cut -d "+" -f1`.png & done
   else 
    echo "OK then."
    exit 0
@@ -47,13 +48,12 @@ elif [[ $1 == "png" ]]; then
 elif [[ $1 == "mov" ]]; then
  EXT=MOV
  check_if_exist
- echo "Here's what's going to happen:"
- for i in `ls | grep MOV`; do echo "mv $i `exiftool $i | grep "^Create Date" | grep -v err | awk -F " " '{print $4"_"$5}' | sed 's/:/-/g' | cut -d "+" -f1`.mov"; done
- echo "Shall we proceed? [yes/no]"
+ echo "Here's what's going to happen. Review and choose [yes/no]."
+ for i in `ls | grep MOV`; do echo "mv $i `exiftool $i | grep "^Create Date" | grep -v err | awk -F " " '{print $4"_"$5}' | sed 's/:/-/g' | cut -d "+" -f1`.mov" & done
  read ANSWER
 
   if [[ $ANSWER == "yes" ]]; then
-   for i in `ls | grep MOV`; do echo "mv $i `exiftool $i | grep "^Create Date" | grep -v err | awk -F " " '{print $4"_"$5}' | sed 's/:/-/g' | cut -d "+" -f1`.mov"; mv $i `exiftool $i | grep "^Create Date" | grep -v err | awk -F " " '{print $4"_"$5}' | sed 's/:/-/g' | cut -d "+" -f1`.mov; done
+   for i in `ls | grep MOV`; do echo "mv $i `exiftool $i | grep "^Create Date" | grep -v err | awk -F " " '{print $4"_"$5}' | sed 's/:/-/g' | cut -d "+" -f1`.mov"; mv $i `exiftool $i | grep "^Create Date" | grep -v err | awk -F " " '{print $4"_"$5}' | sed 's/:/-/g' | cut -d "+" -f1`.mov & done
    else 
     echo "OK then."
    exit 0
@@ -62,13 +62,13 @@ elif [[ $1 == "mov" ]]; then
 elif [[ $1 == "mp4" ]]; then
  EXT=mp4
  check_if_exist
- echo "Here's what's going to happen:"
- for i in `ls | grep mp4`; do echo "mv $i `exiftool $i | grep "^Create Date" | grep -v err | awk -F " " '{print $4"_"$5}' | sed 's/:/-/g' | cut -d "+" -f1`.mp4"; done
+ echo "Here's what's going to happen. Review and choose [yes/no]."
+ for i in `ls | grep "mp4"`; do echo "mv $i `exiftool $i | grep "^Create Date" | grep -v err | awk -F " " '{print $4"_"$5}' | sed 's/:/-/g' | cut -d "+" -f1`.MP4" & done
  echo "Shall we proceed? [yes/no]"
  read ANSWER
 
   if [[ $ANSWER == "yes" ]]; then
-   for i in `ls | grep mp4`; do echo "mv $i `exiftool $i | grep "^Create Date" | grep -v err | awk -F " " '{print $4"_"$5}' | sed 's/:/-/g' | cut -d "+" -f1`.mp4"; mv $i `exiftool $i | grep "^Create Date" | grep -v err | awk -F " " '{print $4"_"$5}' | sed 's/:/-/g' | cut -d "+" -f1`.mp4; done
+   for i in `ls | grep "mp4"`; do echo "mv $i `exiftool $i | grep "^Create Date" | grep -v err | awk -F " " '{print $4"_"$5}' | sed 's/:/-/g' | cut -d "+" -f1`.MP4"; mv $i `exiftool $i | grep "^Create Date" | grep -v err | awk -F " " '{print $4"_"$5}' | sed 's/:/-/g' | cut -d "+" -f1`.MP4 & done
    else 
     echo "OK then."
    exit 0
