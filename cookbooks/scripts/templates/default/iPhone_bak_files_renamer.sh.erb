@@ -13,7 +13,7 @@ count=`ls -1 *.$EXT 2>/dev/null | wc -l`
    exit 0
 fi 
 }
-
+for i in $(find . -type d | grep APPLE); do  mv ${i}/* ${PWD}; done
 if [[ $1 == "jpg" ]]; then
  EXT=JPG
  check_if_exist
